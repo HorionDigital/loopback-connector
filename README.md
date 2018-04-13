@@ -24,6 +24,8 @@ SQL generated will look somthing like this:
         "public"."relatedModel" AS RelatedModel ON RelatedModel."dependsOfRelationTypeAndForeignKey" = Model."dependsOfRelationTypeAndForeignKey"
     WHERE
         Model."foo" = "bar" AND RelatedModel."relatedModelPropName" = "value"
+    GROUP BY
+        Model."id"
 
 
 # LoopBack Connector
